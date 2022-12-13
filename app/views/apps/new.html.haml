@@ -1,0 +1,13 @@
+.row
+  .twelve.columns
+    %h3
+      Create a new MyUSA App
+.row
+  .eight.columns
+    = form_for @app do |f|
+      - if @app.errors.any?
+        .alert-box.alert
+          = error_messages_for(@app)
+      = render :partial => "form", :locals => {:f => f}
+      = f.submit 'Register New MyUSA App', :class => 'button positive'
+      = link_to 'Cancel', apps_path

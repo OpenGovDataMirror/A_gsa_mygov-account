@@ -1,0 +1,23 @@
+.row
+  .eight.columns
+    %h2
+      Authentication providers
+    %p
+      = flash_messages
+    .panel
+      %p
+        = link_to 'Add an authentication provider to your account', new_authentication_path
+      %table
+        %tr
+          %th
+            Provider
+          %th
+            Actions
+        - @authentications.each do |authentication|
+          %tr
+            %th
+              = authentication.provider.titleize
+            %th
+              = link_to 'Delete', authentication_path(authentication), :method => :delete
+
+    = link_to 'Back to Account Settings', account_index_path

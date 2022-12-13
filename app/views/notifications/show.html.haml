@@ -1,0 +1,21 @@
+.row
+  .twelve.columns
+    %h2
+      Notifications
+.row
+  .eight.columns
+    .panel
+      %h3
+        = @notification.subject
+      %ul.meta-list
+        %li
+          Received: #{pretty_time(@notification.received_at)}
+        %li
+          - if @notification.app
+            From: #{@notification.app.name}
+          - else
+            From: MyUSA
+      = content_tag(:p, (@notification.app ? @notification.body : @notification.body.html_safe))
+      = link_to notification_path(@notification), :method => :delete, :class => 'small alert button' do
+        %i{:class => 'foundicon-remove'}
+        Remove

@@ -1,0 +1,13 @@
+.row
+  .four.columns 
+    .panel.group
+      .row
+        .four.columns
+          = image_tag app.logo.url(:thumb), alt: "#{app.name} logo"
+      .row
+        .six.columns
+          %h3
+            = link_to(app.name, app_path(app))
+            = " (Authorized)" if @user_installed_apps.include?(app)
+          %p
+            = app.short_description

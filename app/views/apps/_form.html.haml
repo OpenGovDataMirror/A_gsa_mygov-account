@@ -1,0 +1,42 @@
+:css
+  .camo{
+    display:none;
+  }
+
+
+%ul
+  %li
+    = f.label :name
+    = f.text_field :name
+  %li
+    = f.label :description
+    = f.text_area :description, :rows=>5
+  %li
+    = f.label(:short_description, 'Short Description')
+    = f.text_field :short_description
+  %li.upcase
+    = f.label(:url, 'URL')
+    = f.text_field :url
+  %li
+    = f.label(:redirect_uri, "Redirect URI")
+    = f.text_field :redirect_uri
+  %li
+    = f.label :logo
+    = f.file_field :logo
+  %li
+    = f.label :custom_text
+    = f.text_field :custom_text
+  %li
+    = label_tag 'app_oauth_scopes' do
+      %p
+        Select which parts of the MyUSA API your application will use:
+      %ul
+        - @scope_groups.each do |oauth_scope|
+          %li
+            = render :partial => 'oauth_scope_checkbox', :locals => {:app => @app, :oauth_scope => oauth_scope, :index => oauth_scope.id, :is_parent => true}
+            .camo{id: "camo_#{oauth_scope.scope_name.split(/\./)[0]}"}
+              - if @grouped_scopes[oauth_scope.scope_name.to_sym]
+                %ul
+                  - @grouped_scopes[oauth_scope.scope_name.to_sym].each do |grouped_oauth_scope|
+                    %li
+                      = render :partial => 'oauth_scope_checkbox', :locals => {:app => @app, :@sub_scope => grouped_oauth_scope,:oauth_scope => grouped_oauth_scope, :index => oauth_scope.id, :is_parent => false}

@@ -1,0 +1,172 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  meta_description: "A platform for connecting people and government."
+  take_control: "Take control of how you interact with government."
+  read_more: "Read more about MyUSA"
+  account: "Account"
+  sign_up: "Sign up"
+  sign_in: "Sign in"
+  sign_out: "Sign out"
+  zip_error: "Please enter your 5 digit zip code."
+  sign_in_prompt: "Already using MyUSA?"
+  sign_in_link: "Sign in"
+  update: "Update"
+  back: "Back"
+  thank_you: "Thank you"
+  cancel: "Cancel"
+  delete: "Delete"
+
+  remain_logged_in: "Remain signed in."
+  session_expiration_warning_no_script_html: "We noticed you have not been very active in MyUSA. %{link}"
+  session_expiration_warning_html: "We noticed you haven't been very active in MyUSA. %{link}"
+  beta_signup_error: "An error occurred during signup.  Please try again."
+  beta_warning_message: "MyUSA is currently in limited Beta. Only users with a government (.gov) email address are allowed to sign up."
+  apps_leaving: "In a few seconds, you will be redirected to"
+  leaving_myusa: "You are leaving MyUSA"
+  not_part_of_myusa: "Please note that this page is not a part of MyUSA."
+
+  unauthorized_scope: "Requesting unauthorized scopes"
+  custom_session_timeout: 'Your session expired. Please sign in again.'
+  invalid_uri: "must be a valid URL"
+  activerecord:
+      attributes:
+        app:
+          slug: "Handle"
+
+  about_myusa: "About MyUSA"
+  developers: "Developers"
+  digital_government: "Digital Government: Building a 21st Century Platform"
+  privacy_policy: "Privacy policy"
+  terms_of_service: "Terms of service"
+
+  forgot_your_password: "Forgot your password?"
+  change_your_password: "Change your password"
+  change_my_password: "Change my password"
+  need_current_password: "we need your current password to confirm your changes"
+  change_your_email_address: "Change your email address"
+  new_password: "New password"
+  confirm_new_password: "Confirm new password"
+
+  account_deleted: "Your MyUSA account has been deleted."
+  account_deleted_email: "We've sent you an email to confirm the account removal. Please consider signing up again soon."
+
+  i_agree_html: "I agree to the MyUSA %{terms_of_service_link} and %{privacy_policy_link}."
+
+  thank_you_for_signing_up: "Thank you for signing up"
+  we_sent_you_an_email: "We've sent you an email to verify you're a person and not a robot. Please follow the instructions in the email, and we'll see you back here shortly."
+
+  edit_notification_settings: "Edit notification settings"
+  update_your_notification_settings: "Update your notification settings"
+  your_profile: "Your profile"
+  edit_your_profile: "Edit your profile"
+  name: "Name"
+  title: "Title"
+  first_name: "First name"
+  middle_name: "Middle name"
+  last_name: "Last name"
+  suffix: "Suffix"
+  address: "Address"
+  address2: "Address (Line 2)"
+  city: "City"
+  state: "State"
+  zip: "Zip"
+  phone: "Phone"
+  mobile: "Mobile"
+  gender: "Gender"
+  marital_status: "Marital status"
+  about_you: "About you"
+  parent: "Parent"
+  student: "Student"
+  retired: "Retired"
+  veteran: "Veteran"
+  update_profile: "Update profile"
+  email: "Email"
+  notify_me: "Send me notifications"
+  notifications_updated: "Your notification settings were sucessfully updated."
+  your_account: "Your account"
+  account_activity: "Account activity"
+  authentication_providers: "Authentication providers"
+  delete_your_account: "Delete your account"
+  are_you_sure: "Are you sure?"
+  by_deleting: "By deleting your account, all information associated with your account will be deleted forever. (You can't undo this later.)"
+
+  errors:
+    messages:
+      expired: "has expired. Please request a new one."
+      not_found: "not found."
+      already_confirmed: "has already been confirmed. Please try <a href='/sign_in'>signing in.</a>"
+      not_locked: "wasn't locked."
+      not_saved:
+        one: "Error:"
+        other: "Error:"
+
+  devise:
+    failure:
+      already_authenticated: "You're already signed in."
+      unauthenticated: 'Please sign in or sign up before continuing.'
+      unconfirmed: 'First we ask that you confirm your account. Please refer to the email we sent you.'
+      locked: "There are problems with that email address. You will receive an email if your account has been locked. Otherwise, try <a href='/password/new'>resetting</a> your password."
+      invalid: "We don't recognize that email or password."
+      not_found_in_database: "We don't recognize that email or password."
+      invalid_token: "We don't recognize this. Please visit try again."
+      timeout: 'Your session expired. Please sign in again.'
+      inactive: "Your account hasn't been activated yet."
+    sessions:
+      signed_in: 'Signed in successfully.'
+      signed_out: 'Signed out successfully.'
+    passwords:
+      send_instructions: "You'll receive an email in a few minutes explaining how to reset your password."
+      updated: 'Your password was changed successfully. You are now signed in.'
+      updated_not_active: 'Your password was changed successfully.'
+      send_paranoid_instructions: "If we have your email address, you'll receive an email in a few minutes explaining next steps regarding your password."
+      no_token: "In order to access this page, you must arrive from a password reset email. If you came from a password reset email, please make sure you used the full URL provided."
+      user:
+        ambiguous_email: Instructions will be sent to the email if it exists in our system
+        email_required: Please enter an email address
+        email_invalid: Please enter a valid email address
+    confirmations:
+      send_instructions: "You'll receive an email explaining how to confirm your account in a few minutes."
+      send_paranoid_instructions: "If we have your email address, you'll receive an email in a few minutes explaining how to confirm your account."
+      confirmed: "Your account was successfully confirmed. You're now signed in."
+      user:
+        ambiguous_email: Instructions to confirm the account will be sent to the email if it exists in our system and if the account has not already been confirmed.
+        email_required: Please enter an email address
+        email_invalid: Please enter a valid email address
+    registrations:
+      signed_up: 'Welcome. You have signed up successfully.'
+      signed_up_but_unconfirmed: "You'll be receiving an email confirmation. Please click the link in the email to activate your account."
+      signed_up_but_inactive: 'You have successfully signed up. However, we could not sign you in because your account is not yet activated.'
+      signed_up_but_locked: "You have signed up successfully. However, we couldn't sign you in because your account is locked."
+      updated: 'You updated your account successfully.'
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize everything."
+      destroyed: "Sorry to see you go. Your account was successfully cancelled. We hope you'll come back soon."
+    unlocks:
+      send_instructions: "You'll receive an email with instructions about how to unlock your account in a few minutes."
+      unlocked: 'Your account has been unlocked successfully. Please sign in to continue.'
+      send_paranoid_instructions: "If your account exists, you'll receive an email with instructions explaining how to unlock it in a few minutes."
+      user:
+        ambiguous_email: Instructions to unlock the account will be sent to the email if it exists in our system and if the account is locked.
+        email_required: Please enter an email address
+        email_invalid: Please enter a valid email address
+    omniauth_callbacks:
+      success: 'Successfully authenticated from %{kind} account.'
+      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Confirmation instructions'
+      reset_password_instructions:
+        subject: 'Reset password instructions'
+      unlock_instructions:
+        subject: 'Unlock Instructions'
+  errors:
+    messages:
+      already_confirmed: "may already have been confirmed or it does not exist. Please try <a href='/sign_in'>signing in</a> or <a href='/sign_up'>signing up</a>."
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "Please check your inbox for an email from MyUSA."
+      not_locked: "not found."
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

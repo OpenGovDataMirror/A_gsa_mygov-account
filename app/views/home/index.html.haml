@@ -1,0 +1,20 @@
+.row
+  .ten.columns.centered.banner
+    %h2
+      = t(:take_control)
+
+.signup-form.margin-top
+  .row
+    .six.columns.centered
+      %h3
+        Try it out
+      #signup-form
+        #fieldset
+          = form_for @beta_signup, html: {novalidate: true} do |form|
+            = flash_messages
+            = form.label :email
+            = form.email_field :email, explanation_not_required: true
+            = form.submit t(:sign_up), :class => 'large button positive '
+  
+      %p.disclaimer
+        %a.plain{:href => "http://myusa.tumblr.com/about"}= t(:read_more)

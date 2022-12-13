@@ -1,0 +1,67 @@
+.row
+  .eight.columns
+    %h2
+      = t(:your_profile)
+  .four.columns.align-right.actions           
+    = link_to edit_profile_path, :class => 'small button' do
+      %i{:class => "foundicon-edit"}
+      = t(:edit_your_profile)
+.row
+  .six.columns
+    .panel.listing
+      %h3
+        = t(:name)
+      %ul.profile      
+        %li
+          #{t(:title)}: #{@profile.title}
+        %li
+          #{t(:first_name)}: #{@profile.first_name}
+        %li
+          #{t(:middle_name)}: #{@profile.middle_name}
+        %li
+          #{t(:last_name)}: #{@profile.last_name}
+        %li
+          #{t(:suffix)}: #{@profile.suffix}
+    
+    .panel.listing
+      %h3
+        = t(:address)
+      %ul.profile 
+        %li
+          #{t(:address)}: #{@profile.address}
+        %li
+          #{t(:address2)}: #{@profile.address2}
+        %li
+          #{t(:city)}: #{@profile.city}
+        %li
+          #{t(:state)}: #{@profile.state}
+        %li
+          #{t(:zip)}: #{@profile.zip}
+  .six.columns        
+    .panel.listing
+      %h3 
+        = t(:phone)
+      %ul.profile   
+        %li
+          #{t(:phone)}: #{@profile.phone_number}
+        %li
+          #{t(:mobile)}: #{@profile.mobile_number}    
+    .panel.listing
+      %h3
+        = t(:about_you)
+      %ul.profile
+        %li
+          #{t(:email)}: #{@user.email}
+        %li
+          #{t(:gender)}: #{@profile.print_gender}
+        %li
+          #{t(:marital_status)}: #{@profile.print_marital_status}
+        %li
+          #{t(:parent)}: #{yes_or_no(@profile.is_parent)}
+        %li
+          #{t(:veteran)}: #{yes_or_no(@profile.is_veteran)}
+        %li
+          #{t(:student)}: #{yes_or_no(@profile.is_student)}
+        %li
+          #{t(:retired)}: #{yes_or_no(@profile.is_retired)}
+.row

@@ -1,0 +1,8 @@
+DEFAULT_FROM_EMAIL = "\"MyUSA\" <no-reply@my.usa.gov>"
+
+# run 'rake secret' from the command line and copy the result here.
+RAILS_SECRET_TOKEN = "PUT YOUR SECRET TOKEN HERE"
+AIRBRAKE_API_KEY = "PUT YOUR AIRBRAKE API KEY HERE"
+
+ENV['RECAPTCHA_PUBLIC_KEY'] 	= "PUBLIC_KEY"
+ENV['RECAPTCHA_PRIVATE_KEY'] 	= "PRIVATE_KEY"

@@ -1,0 +1,60 @@
+.row
+  .ten.columns.centered.banner
+    %h2
+      = t(:take_control)
+.row
+  .eight.columns
+    .panel
+      %fieldset.fancy
+        %legend
+          %span
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+          Sign up
+          %span
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+            %i{:class => "foundicon-star"}
+        %p
+          = form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {novalidate: true}) do |f|
+            = flash_messages
+            = devise_error_messages!
+            %ol
+              %li
+                = f.label :first_name
+                = f.text_field :first_name
+              %li
+                = f.label :last_name
+                = f.text_field :last_name
+              %li
+                = f.label :email
+                = f.email_field :email
+              - if @using_oauth
+                = f.password_field :password, type: 'hidden', value: '1PlaceHolder', autocomplete: 'off'
+              - else
+                %li
+                  %span{:id=>'tip-password', :class=>'tooltip'}
+                    Password must include at least one lower case letter, one upper case letter and one digit, and be at least 8 characters long.
+                  = f.label :password, :required => !@using_oauth
+                  = f.password_field :password, autocomplete: 'off'
+              %li
+                %span{:id=>'tip-zip', :class=>'tooltip'}
+                  Entering your zip code will enable us to send you alerts and content relevant to your location.
+                  %i (Not required)
+                = f.label :zip
+                %br
+                = f.text_field :zip, {'aria-described-by'=>'tip-zip'}
+              %li
+                = f.label :terms_of_service do
+                  = f.check_box :terms_of_service, {}, "1", "0", t(:i_agree_html, :terms_of_service_link => link_to(t(:terms_of_service), terms_of_service_path), :privacy_policy_link => link_to(t(:privacy_policy), privacy_policy_path))
+
+              %li
+                = recaptcha_tags display: {theme: 'clean'} if recaptcha_needed?
+              %li= f.submit t(:sign_up), :class => 'button positive', :accesskey => access_keys[:submit]
+
+  .four.columns
+    .panel.side-panel
+      = render "devise/shared/provider_links"

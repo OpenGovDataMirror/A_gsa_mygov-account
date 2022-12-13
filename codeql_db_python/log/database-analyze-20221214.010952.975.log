@@ -1,0 +1,15 @@
+[2022-12-14 01:09:53] This is codeql database analyze codeql_db_python --format=sarif-latest --output=results.sarif_python
+[2022-12-14 01:09:53] Log file was started late.
+[2022-12-14 01:09:53] [PROGRESS] database analyze> Running queries.
+[2022-12-14 01:09:53] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account/qlconfig.yml --no-rerun -- /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python
+[2022-12-14 01:09:53] Calling plumbing command: codeql resolve ram --format=json
+[2022-12-14 01:09:53] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx4004M",
+                        "--off-heap-ram=4004"
+                      ]
+[2022-12-14 01:09:53] Spawning plumbing command: execute queries -J-Xmx4004M --off-heap-ram=4004 --verbosity=progress --logdir=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python/log --evaluator-log-level=5 --insecurely-execute-ml-model-checksums= --warnings=show --qlconfig-file=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account/qlconfig.yml --no-rerun --output=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python/results -- /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python/db-python codeql/python-queries
+[2022-12-14 01:09:56] [ERROR] Spawned process exited abnormally (code 2; tried to run: [/home/user/codeql/codeql/tools/linux64/java/bin/java, -Xmx4004M, -Djava.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib, -cp, /home/user/codeql/codeql/tools/codeql.jar, com.semmle.cli2.CodeQL, env_argv, execute, queries, -J-Xmx4004M, _, _, _, _, _, _, _, --no-rerun, _, --, /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python/db-python, codeql/python-queries])
+[2022-12-14 01:09:56] Plumbing command codeql execute queries terminated with status 2.
+[2022-12-14 01:09:56] Plumbing command codeql database run-queries completed with status 2.
+[2022-12-14 01:09:56] Exiting with code 2

@@ -1,0 +1,150 @@
+[2022-12-14 01:09:48] This is codeql database create codeql_db_python --language=python
+[2022-12-14 01:09:48] Log file was started late.
+[2022-12-14 01:09:48] [PROGRESS] database create> Initializing database at /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python.
+[2022-12-14 01:09:48] Running plumbing command: codeql database init --language=python --source-root=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account --allow-missing-source-root=false --allow-already-existing -- /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python
+[2022-12-14 01:09:48] [PROGRESS] database init> Computing baseline information in /home/user/asf/cloner/gh/clones/A_gsa_mygov-account
+[2022-12-14 01:09:49] [PROGRESS] database init> Resolving extractor python.
+[2022-12-14 01:09:49] Calling plumbing command: codeql resolve languages --format=json
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /home/user/codeql/codeql/.codeqlmanifest.json
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/cpp/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/javascript/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/python/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/html/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/properties/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/go/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/ruby/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/csharp/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/xml/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/java/codeql-extractor.yml.
+[2022-12-14 01:09:49] [DETAILS] resolve languages> Parsing /home/user/codeql/codeql/csv/codeql-extractor.yml.
+[2022-12-14 01:09:49] Plumbing command codeql resolve languages completed:
+                      {
+                        "extractors" : {
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/cpp"
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/javascript",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/python"
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/html"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/properties"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/go"
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/ruby"
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction.",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "cil" : {
+                                  "title" : "Whether to enable CIL extraction.",
+                                  "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/xml"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                }
+                              }
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/home/user/codeql/codeql/csv"
+                            }
+                          ]
+                        }
+                      }
+[2022-12-14 01:09:49] [DETAILS] database init> Found candidate extractor root for python: /home/user/codeql/codeql/python.
+[2022-12-14 01:09:49] [PROGRESS] database init> Successfully loaded extractor Python (python) from /home/user/codeql/codeql/python.
+[2022-12-14 01:09:49] [PROGRESS] database init> Created skeleton CodeQL database at /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python. This in-progress database is ready to be populated by an extractor.
+[2022-12-14 01:09:49] Plumbing command codeql database init completed.
+[2022-12-14 01:09:49] [PROGRESS] database create> Running build command: []
+[2022-12-14 01:09:49] Running plumbing command: codeql database trace-command --working-dir=/home/user/asf/cloner/gh/clones/A_gsa_mygov-account --index-traceless-dbs --no-db-cluster -- /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python
+[2022-12-14 01:09:49] Using autobuild script /home/user/codeql/codeql/python/tools/autobuild.sh.
+[2022-12-14 01:09:49] [PROGRESS] database trace-command> Running command in /home/user/asf/cloner/gh/clones/A_gsa_mygov-account: [/home/user/codeql/codeql/python/tools/autobuild.sh]
+[2022-12-14 01:09:49] [build-stdout] No directories containing root identifiers were found. Returning working directory as root.
+[2022-12-14 01:09:49] [build-stdout] Will try to guess Python version, as it was not specified in `lgtm.yml`
+[2022-12-14 01:09:49] [build-stdout] Trying to guess Python version based on Trove classifiers in setup.py
+[2022-12-14 01:09:49] [build-stdout] Did not find setup.py (expected it to be at /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/setup.py)
+[2022-12-14 01:09:49] [build-stdout] Trying to guess Python version based on travis file
+[2022-12-14 01:09:49] [build-stdout] Found a travis file, but yaml library not available
+[2022-12-14 01:09:49] [build-stdout] Trying to guess Python version based on installed versions
+[2022-12-14 01:09:50] [build-stdout] This script is running Python 3, but Python 2 is also available (as 'python2')
+[2022-12-14 01:09:50] [build-stdout] Could not guess Python version, will use default: Python 3
+[2022-12-14 01:09:50] [build-stdout] Calling python3 /home/user/codeql/codeql/python/tools/get_venv_lib.py
+[2022-12-14 01:09:50] [build-stdout] Calling python3 -S /home/user/codeql/codeql/python/tools/python_tracer.py -v -z all -c /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python/working/trap_cache -p /home/user/.local/share/virtualenvs/gh-H7OYS2E2/lib/python3.8/site-packages -R /home/user/asf/cloner/gh/clones/A_gsa_mygov-account
+[2022-12-14 01:09:50] [build-stdout] [INFO] Extraction will use the Python 3 standard library.
+[2022-12-14 01:09:50] [build-stdout] [INFO] sys_path is: ['/home/user/codeql/codeql/python/tools', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/lib-dynload']
+[2022-12-14 01:09:50] [build-stdout] [INFO] Python version 3.8.10
+[2022-12-14 01:09:50] [build-stdout] [INFO] Python extractor version 5.28
+[2022-12-14 01:09:50] [build-stdout] [INFO] Processed 0 modules in 0.29s
+[2022-12-14 01:09:51] Plumbing command codeql database trace-command completed.
+[2022-12-14 01:09:51] [PROGRESS] database create> Finalizing database at /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python.
+[2022-12-14 01:09:51] Running plumbing command: codeql database finalize --mode=normal --no-db-cluster -- /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python
+[2022-12-14 01:09:51] [ERROR] database finalize> No source code was seen and extracted to /home/user/asf/cloner/gh/clones/A_gsa_mygov-account/codeql_db_python.
+                              This can occur if the specified build commands failed to compile or process any code.
+                               - Confirm that there is some source code for the specified language in the project.
+                               - For codebases written in Go, JavaScript, TypeScript, and Python, do not specify 
+                                 an explicit --command.
+                               - For other languages, the --command must specify a "clean" build which compiles 
+                                 all the source code files without reusing existing build artefacts.
+[2022-12-14 01:09:51] Plumbing command codeql database finalize completed with status 32.
+[2022-12-14 01:09:51] Exiting with code 32

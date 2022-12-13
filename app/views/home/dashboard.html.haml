@@ -1,0 +1,12 @@
+.row
+  .one.columns.navigation
+    = render :partial => 'dashboard_nav' 
+  .eleven.columns.dashboard
+    = flash_messages
+    = render :partial => 'dashboard_profile'
+    = render :partial => 'dashboard_notifications'
+    = render :partial => 'dashboard_tasks'
+    = render :partial => 'dashboard_apps' 
+.row
+  .twelve.columns    
+    = render :partial => 'administrative_settings'
